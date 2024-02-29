@@ -44,7 +44,7 @@ function trackDistance() {
             const distance = calculateDistance(lastPosition.latitude, lastPosition.longitude, latitude, longitude);
             totalDistance += distance;
             // console.log("Distance traveled:", totalDistance.toFixed(2), "kilometers");
-            resultDigit.innerText = totalDistance;
+            resultDigit.innerText = totalDistance * (rate / mileage);
         }
         lastPosition = { latitude, longitude };
     }
