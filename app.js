@@ -2,6 +2,7 @@ let form = document.querySelector('#petrolForm');
 let resultDiv = document.querySelector('#result');
 let liveTag = document.querySelector('.live-tag');
 let resultDigit = document.querySelector('.number');
+let rate, mileage;
 
 document.getElementById('petrolForm').addEventListener('submit', function (event) {
     event.preventDefault();
