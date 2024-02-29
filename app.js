@@ -8,8 +8,8 @@ document.getElementById('petrolForm').addEventListener('submit', function (event
     event.preventDefault();
 
     // Get input values
-    let rate = parseFloat(document.getElementById('rate').value);
-    let mileage = parseFloat(document.getElementById('mileage').value);
+    rate = parseFloat(document.getElementById('rate').value);
+    mileage = parseFloat(document.getElementById('mileage').value);
 
     form.style.display = 'none';
     resultDiv.style.display = 'block';
