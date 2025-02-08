@@ -61,7 +61,11 @@ function trackDistance() {
     document.getElementById("startButton").addEventListener("click", function() {
         if ('geolocation' in navigator) {
             // Start watching position changes
-            watchId = navigator.geolocation.watchPosition(handlePosition, handleError);
+            watchId = navigator.geolocation.watchPosition(handlePosition, handleError, {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0,
+            });
             console.log("Started tracking distance.");
         } else {
             console.error("Geolocation is not supported by this browser.");
